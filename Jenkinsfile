@@ -19,7 +19,7 @@ pipeline {
     post {
         always {
             script {
-                archiveZap(failAllAlerts: 1, failHighAlerts: 1, failMediumAlerts: 1, failLowAlerts: 0, falsePositivesFilePath: "zapFalsePositives.json")
+                archiveZap(failAllAlerts: 0, failHighAlerts: 0, failMediumAlerts: 1, failLowAlerts: 0, falsePositivesFilePath: "zapFalsePositives.json")
             }
         }
     }

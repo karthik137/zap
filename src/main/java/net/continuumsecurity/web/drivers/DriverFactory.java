@@ -49,7 +49,7 @@ public class DriverFactory {
         System.setProperty("webdriver.chrome.driver", path);
         if (capabilities != null) {
 	    ChromeOptions options = new ChromeOptions();
-	    options.addArguments("headless");
+	    options.addArguments("--headless");
 	    capabilities.setCapability(ChromeOptions.CAPABILITY, options);
             capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
             return new ChromeDriver(capabilities);

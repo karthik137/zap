@@ -30,7 +30,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
+import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.File;
 
 public class DriverFactory {
@@ -48,6 +48,9 @@ public class DriverFactory {
     public static WebDriver createChromeDriver(DesiredCapabilities capabilities, String path) {
         System.setProperty("webdriver.chrome.driver", path);
         if (capabilities != null) {
+	    ChromeOptions chromeOptions = new ChromeOptions();
+	    options.addArguments("headless");
+	    capabilities.setCapability(ChromeOptions.CAPABILITY, options);
             capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
             return new ChromeDriver(capabilities);
         } else return new ChromeDriver();

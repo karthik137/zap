@@ -46,7 +46,7 @@ public class ZapScanTest {
     private final static String ZAP_APIKEY = null;
 
     // Change this to the appropriate driver for the OS, alternatives in the drivers directory
-    private final static String CHROME_DRIVER_PATH = "drivers/chromedriver-linux64";
+    private final static String CHROME_DRIVER_PATH = "/var/lib/jenkins/workspace/zap_pipline/drivers/chromedriver-linux64";
     private final static String MEDIUM = "MEDIUM";
     private final static String HIGH = "HIGH";
     private ScanningProxy zapScanner;

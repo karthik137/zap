@@ -4,7 +4,7 @@ pipeline {
         stage('Setup') {
             steps {
                 script {
-                    startZap(host: "localhost", port: 8888, timeout:500, zapHome: "/opt/zaproxy/", sessionPath:"/somewhere/session.session", allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com (if allowedHosts is not provided, any local addresses will be used
+                    startZap(host: "localhost", port: 8888, timeout:500, zapHome: "/opt/zaproxy/", sessionPath:"/home/mphasis/.ZAP/sessions/20190430-120420.session", allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com (if allowedHosts is not provided, any local addresses will be used
                 }
             }
         }
